@@ -4,7 +4,7 @@
 918 -> 1 */
 
 Console.Write("Input your three-digit number: ");
-int threeDigitNumber = Convert.ToInt32(Console.Read());
+int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
 int ab = threeDigitNumber % 100;
 int b = ab / 10;
-Console.Write("Second number in your three-digit number is: " + b);
+Console.Write("Your second number in a three-digit number is: " + b);
