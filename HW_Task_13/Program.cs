@@ -4,28 +4,19 @@
 32679 -> 6 */
 
 Console.Write("Input your number: ");
-int N = Convert.ToInt32(Console.ReadLine());
-
-if (N > 99 && N < 1000)
+int n = Convert.ToInt32(Console.ReadLine());
+int N = n / 10;
+int res = N % 10;
+if (n < 99)
 {
-    int n = N % 10;
-    Console.Write("Third number is: " + n);
-}
-else if (N > 0 && N < 100)
-{
-    int n = N % 10;
     Console.Write("Third number is missing.");
 }
 else
 {
-    if (N > 1000 && N < 10000)
+    while (n > 999)
     {
-        int n = (N / 10) % 10;
-        Console.Write("Third number is: " + n);
+        n = n / 10;
     }
-    else if (N > 10000 && N < 100000)
-    {
-        int n = (N / 100) % 10;
-        Console.Write("Third number is: " + n);
-    }
+    res = n % 10;
+    Console.Write("Third number is :" + res);
 }
